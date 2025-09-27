@@ -13,11 +13,11 @@
 
             <!-- Blog Post (Right Sidebar) Start -->
             <div class="col-md-9">
-                <?php include_once '../app/views/templates/posts/index.php';?>
+                <?php echo $content;?>
 
-            <!-- Footer Start -->
+                <!-- Footer Start -->
                 <?php include_once '../app/views/templates/partials/_footer.php';?>      
-            <!-- Footer End -->
+                <!-- Footer End -->
             </div>
           <!-- Blog Post (Right Sidebar) End -->
         </div>
