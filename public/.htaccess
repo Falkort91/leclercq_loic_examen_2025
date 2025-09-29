@@ -1,0 +1,8 @@
+RewriteEngine on
+
+#ROUTES
+
+#posts.show
+#URL: posts/id/slug.html
+#PATTERN: /posts/id/slug-du-post
+RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*.html$ index.php?posts=show&id=$1 [L]

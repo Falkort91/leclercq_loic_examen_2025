@@ -33,12 +33,12 @@ ROUTES
 		ACTION: ???
 		TITLE: Alex Parker - Blog
 
-	ROUTE DU DETAIL D'UN POST
-			PATTERN: /posts/id/slug-du-post.html
-			URL: ???
-			CTRL: ???
-			ACTION: ???
-			TITLE: Alex Parker - Title du post
+		ROUTE DU DETAIL D'UN POST
+				PATTERN: /posts/id/slug-du-post.html
+				URL: ???
+				CTRL: ???
+				ACTION: ???
+				TITLE: Alex Parker - Title du post
 
 	ROUTE D'AJOUT D'UN POST: affichage du formulaire
 			PATTERN: /posts/add/form.html

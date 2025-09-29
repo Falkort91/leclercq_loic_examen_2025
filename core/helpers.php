@@ -2,7 +2,7 @@
 
 namespace Core\Helpers;
 
-function truncate(string $resume, int $length=100): string{
+function truncate(string $resume, int $length=150): string{
 
     if(strlen($resume)>$length){
         $cut =substr($resume,0,$length);

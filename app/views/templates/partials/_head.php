@@ -2,6 +2,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
 
     <!-- SEO -->
     <meta name="description" content="150 words" />
@@ -9,6 +10,7 @@
     <meta name="url" content="http://www.yourdomainname.com" />
     <meta name="copyright" content="company name" />
     <meta name="robots" content="index,follow" />
+    <base href="<?php echo PUBLIC_BASE_URL;?>">
 
     <title>DevBlog - Personal Blog Template</title>
 

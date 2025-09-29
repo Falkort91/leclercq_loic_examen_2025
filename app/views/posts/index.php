@@ -11,7 +11,7 @@
              <?php foreach ($posts as $post): ?>
             <div class="col-md-12 blog-post row">
                 <div class="post-title">
-                    <a href="single.html">
+                    <a href="posts/<?php echo $post['id'];?>/<?php echo \Core\Helpers\slugify($post['title']);?>.html">
                         <h1>
                           <?php echo $post['title']?>
                         </h1>
@@ -21,9 +21,9 @@
                     <span><?php echo date('d.M.Y', strtotime($post['created_at']));?></span> | <span><?php echo $post['name']?></span>
                 </div>
                 <p>
-                    <?php echo $post['text']?>
+                    <?php echo Core\Helpers\truncate($post['text'])?>
                 </p>
-                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right">
+                <a href="posts/<?php echo $post['id'];?>/<?php echo \Core\Helpers\slugify($post['title']);?>.html" class="button button-style button-anim fa fa-long-arrow-right">
                     <span>Read More</span>
                 </a>
             </div>
