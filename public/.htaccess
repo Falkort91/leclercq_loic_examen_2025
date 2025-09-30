@@ -6,3 +6,13 @@ RewriteEngine on
 #URL: posts/id/slug.html
 #PATTERN: /posts/id/slug-du-post
 RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*.html$ index.php?posts=show&id=$1 [L]
+
+#Route posts.add-form
+#URL: posts/add-form
+#PATTERN: /posts/add/form.html
+#Créer un lien dans le footer vers la route
+#faire la route avec une vue avec un form
+RewriteRule ^posts/addForm\.html$ index.php?posts=addForm [L]
+
+#---------------------------------------------------
+RewriteCond %{REQUEST_URI} !.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$ [NC]

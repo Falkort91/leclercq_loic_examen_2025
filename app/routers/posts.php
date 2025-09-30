@@ -14,6 +14,14 @@ switch ($_GET['posts']):
 		TITLE: Alex Parker - Title du post */
         PostsController\showAction($connexion, $_GET['id']);
     break;
+    case 'addForm':
+        /* ROUTE D'AJOUT D'UN POST: affichage du formulaire
+			PATTERN: /posts/add/form.html
+			CTRL: postsController
+			ACTION: addFormAction
+			TITLE: Alex Parker - Add a post */
+            PostsController\addFormAction($connexion);
+        break;
     default:
         /* Route par défaut: listes des posts
         PATTERN: /

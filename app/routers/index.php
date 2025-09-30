@@ -1,4 +1,7 @@
 <?php
+
+
+
 if (isset($_GET['posts'])):
     
     include '../app/routers/posts.php';

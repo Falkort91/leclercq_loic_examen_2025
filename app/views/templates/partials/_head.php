@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     
-
     <!-- SEO -->
     <meta name="description" content="150 words" />
     <meta name="author" content="uipasta" />
@@ -12,7 +11,7 @@
     <meta name="robots" content="index,follow" />
     <base href="<?php echo PUBLIC_BASE_URL;?>">
 
-    <title>DevBlog - Personal Blog Template</title>
+    <title><?php echo $title?></title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico" />

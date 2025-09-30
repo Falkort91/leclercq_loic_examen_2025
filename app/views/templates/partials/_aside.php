@@ -13,15 +13,11 @@
                 </ul>
             </nav>
             <ul class="menu-link">
+                <?php foreach ($categories as $category):?>
                 <li>
-                    <a href="index.html">Life style [12]</a>
+                    <a href="index.html"><?php echo $category['name']?> [12]</a>
                 </li>
-                <li>
-                    <a href="index.html">Sport[23]</a>
-                </li>
-                <li>
-                    <a href="index.html">Music[46]</a>
-                </li>
+                <?php endforeach?>
             </ul>
         </div>
 
