@@ -53,3 +53,9 @@ function editAction(PDO $connexion, int $id):void{
     include '../app/views/posts/edit.php';
     $content = ob_get_clean();
 }
+
+function updateAction(PDO $connexion, int $id, $data){
+    include_once '../app/models/postsModel.php';
+    $reponse = PostsModel\update($connexion, $id, $data);
+    header('Location: '. PUBLIC_BASE_URL .'posts/'.$id.'/'.\Core\Helpers\slugify($data['title']).'.html');
+}

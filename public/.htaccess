@@ -14,7 +14,7 @@ RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*.html$ index.php?posts=show&
 #faire la route avec une vue avec un form
 RewriteRule ^posts/add/form\.html$ index.php?posts=form [L]
 
-#ROUTE: posts.create
+#ROUTE: posts.insert
 #URL: posts/insert
 #PATTERN: /posts=insert
 RewriteRule ^posts/add/insert\.html$ index.php?posts=insert [L]
@@ -23,5 +23,12 @@ RewriteRule ^posts/add/insert\.html$ index.php?posts=insert [L]
 #URL: posts/edit
 #PATTERN: /posts/id/slug-du-post/edit/form.html
 RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*/edit/form.html$ index.php?posts=edit&id=$1 [L]
+
+#ROUTE: posts.update
+#URL: posts/update
+#PATTERN: /posts/id/slug-du-post/edit/update.html
+RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*/edit/update.html$ index.php?posts=update&id=$1 [L]
+
+
 #---------------------------------------------------
 RewriteCond %{REQUEST_URI} !.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$ [NC]

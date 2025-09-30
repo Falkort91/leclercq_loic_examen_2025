@@ -38,6 +38,15 @@ switch ($_GET['posts']):
 			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST */
             PostsController\editAction($connexion, $_GET['id']);
         break;
+    case 'update':
+        /* ROUTE DE MODIFICATION D'UN POST: UPDATE
+			PATTERN: /posts/id/slug-du-post/edit/update.html
+			CTRL: ???
+			ACTION: ???
+			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST */
+            PostsController\updateAction($connexion, $_GET['id'], $_POST);
+
+        break;
 
     default:
         /* Route par défaut: listes des posts
