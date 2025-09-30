@@ -22,13 +22,23 @@ switch ($_GET['posts']):
 			TITLE: Alex Parker - Add a post */
             PostsController\addFormAction($connexion);
         break;
-    case 'create':
+    case 'insert':
         /* ROUTE D'AJOUT D'UN POST: INSERT
 			PATTERN: /posts/add/insert.html
 			CTRL: postsController
 			ACTION: createAction
 			PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL */
             PostsController\createAction($connexion, $_POST);
+        break;
+    case 'edit':
+            /* ROUTE DE MODIFICATION D'UN POST: UPDATE
+			PATTERN: /posts/id/slug-du-post/edit/update.html
+			CTRL: postsController
+			ACTION: editAction
+			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST */
+            PostsController\editAction($connexion, $_GET['id']);
+        break;
+
     default:
         /* Route par défaut: listes des posts
         PATTERN: /

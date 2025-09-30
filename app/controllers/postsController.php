@@ -39,4 +39,17 @@ function addFormAction(PDO $connexion){
 function createAction(PDO $connexion, array $data){
     include_once '../app/models/postsModel.php';
     $reponse = PostsModel\create($connexion, $data);
+    header('Location: '. PUBLIC_BASE_URL);
+}
+
+function editAction(PDO $connexion, int $id):void{
+    include_once '../app/models/postsModel.php';
+    $posts = PostsModel\findOneById($connexion, $id);
+    include_once '../app/models/categoriesModel.php';
+    $categories= CategoriesModel\findAll($connexion, $id);
+    global $content, $title;
+    $title = "Alex Parker - Edit a post";
+    ob_start();
+    include '../app/views/posts/edit.php';
+    $content = ob_get_clean();
 }

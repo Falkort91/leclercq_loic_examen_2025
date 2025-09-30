@@ -16,7 +16,7 @@ function findAll(PDO $connexion, int $limit=10):array{
     return $rs->fetchall(PDO::FETCH_ASSOC);
 }
 
-function findOneById(PDO $connexion, $id){
+function findOneById(PDO $connexion, int $id){
     $sql = "SELECT p.*,c.name
             FROM posts p
             JOIN categories c on p.category_id = c.id

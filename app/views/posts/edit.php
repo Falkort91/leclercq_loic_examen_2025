@@ -19,14 +19,14 @@
                     <!-- Post Headline End -->
 
                     <!-- Form Start -->
-                    <form action="/posts/<?php echo $posts['id']?>/<?php echo \Core\Helpers\slugify($post['title']);?>/edit/form.html" method="post">
+                    <form action="/posts/<?php echo $posts['id']?>/slug-du-post/edit/form.html" method="put">
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="title" id="title" class="form-control"  placeholder="Enter your title here"/>
+                            <input type="text" name="title" id="title" class="form-control"  value="<?php echo $posts['title']?? ''?>"/>
                         </div>
                         <div class="form-group">
                             <label for="text">Text</label>
-                            <textarea id="text" name="text" class="form-control" rows="5" placeholder="Enter your text here"></textarea>
+                            <textarea id="text" name="text" class="form-control" rows="5"><?php echo $posts['text']?? ''?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1"> Image</label>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label for="text">Quote</label>
-                            <textarea id="quote" name="quote" class="form-control" rows="5" placeholder="Enter your quote here"></textarea>
+                            <textarea id="quote" name="quote" class="form-control" rows="5"><?php echo $posts['quote']??''?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="text">Category</label>

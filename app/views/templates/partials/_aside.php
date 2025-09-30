@@ -8,15 +8,14 @@
             <nav id="menu">
                 <ul class="menu-link">
                     <li>
-                        <a href="index.html">My blog</a>
+                        <a href="#">My blog</a>
                     </li>
                 </ul>
             </nav>
             <ul class="menu-link">
-                <?php 
-                include_once '../app/models/categoriesModel.php';
-                $categories = App\Models\CategoriesModel\findAll($connexion);
-                foreach ($categories as $category):?>
+                <?php   include_once '../app/models/categoriesModel.php';
+                        $categories = App\Models\CategoriesModel\findAll($connexion);
+                    foreach ($categories as $category):?>
                 <li>
                     <a href="index.html"><?php echo $category['name']?> [12]</a>
                 </li>
