@@ -32,6 +32,11 @@ function addFormAction(PDO $connexion){
     global $content, $tilte;
     $title = "Alex Parker - Add a post";
     ob_start();
-    include '../app/views/posts/addForm.php';
+    include '../app/views/posts/form.php';
     $content = ob_get_clean();
+}
+
+function createAction(PDO $connexion, array $data){
+    include_once '../app/models/postsModel.php';
+    $reponse = PostsModel\create($connexion, $data);
 }

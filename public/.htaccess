@@ -12,7 +12,12 @@ RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*.html$ index.php?posts=show&
 #PATTERN: /posts/add/form.html
 #Créer un lien dans le footer vers la route
 #faire la route avec une vue avec un form
-RewriteRule ^posts/addForm\.html$ index.php?posts=addForm [L]
+RewriteRule ^posts/add/form\.html$ index.php?posts=form [L]
+
+#ROUTE: posts.create
+#URL: posts/create
+#PATTERN: ?posts=create
+RewriteRule ^posts/create$ index.php?posts=create [L]
 
 #---------------------------------------------------
 RewriteCond %{REQUEST_URI} !.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$ [NC]
