@@ -39,9 +39,9 @@
                         <div class="form-group">
                             <label for="text">Category</label>
                             <select id="category_id" name="category_id" class="form-control">
-                                <option disabled selected> Select your category</option>
+                                <option disabled> Select your category</option>
                                 <?php foreach ($categories as $category):?>
-                                <option value="<?php echo $category['id']?>"><?php echo $category['name']?></option>
+                                <option <?php if($posts['category_id'] == $category['id']) echo "selected" ?> value="<?php echo $category['id']?>"><?php echo $category['name']?></option>
                                 <?php endforeach?>
                             </select>
                         </div>

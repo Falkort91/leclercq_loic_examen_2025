@@ -41,11 +41,18 @@ switch ($_GET['posts']):
     case 'update':
         /* ROUTE DE MODIFICATION D'UN POST: UPDATE
 			PATTERN: /posts/id/slug-du-post/edit/update.html
-			CTRL: ???
-			ACTION: ???
+			CTRL: postsController
+			ACTION: updateAction
 			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST */
             PostsController\updateAction($connexion, $_GET['id'], $_POST);
-
+        break;
+    case 'delete':
+        /* ROUTE DE MODIFICATION D'UN POST: DELETE
+			PATTERN: /posts/id/slug-du-post/edit/delete.html
+			CTRL: postsController
+			ACTION: deleteAction
+			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST */
+            PostsController\deleteAction($connexion, $_GET['id']);
         break;
 
     default:

@@ -14,10 +14,10 @@
             </nav>
             <ul class="menu-link">
                 <?php   include_once '../app/models/categoriesModel.php';
-                        $categories = App\Models\CategoriesModel\findAll($connexion);
-                    foreach ($categories as $category):?>
+                        $categories = App\Models\CategoriesModel\countCategories($connexion);?>
+                    <?php foreach ($categories as $category):?>
                 <li>
-                    <a href="index.html"><?php echo $category['name']?> [12]</a>
+                    <a href="index.html"><span><?php echo $category['category']?></span><span>[<?php echo $category['posts_number']?>]</span></a>
                 </li>
                 <?php endforeach?>
             </ul>

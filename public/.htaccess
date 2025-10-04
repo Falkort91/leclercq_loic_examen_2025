@@ -29,6 +29,10 @@ RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*/edit/form.html$ index.php?p
 #PATTERN: /posts/id/slug-du-post/edit/update.html
 RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*/edit/update.html$ index.php?posts=update&id=$1 [L]
 
+#ROUTE: posts.delete
+#URL: posts/delete
+#PATTERN: /posts/id/slug-du-post/edit/delete.html
+RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*/delete.html$ index.php?posts=delete&id=$1 [L]
 
 #---------------------------------------------------
 RewriteCond %{REQUEST_URI} !.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$ [NC]

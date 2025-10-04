@@ -13,7 +13,7 @@ function findAll(PDO $connexion, int $limit=10):array{
     $rs=$connexion->prepare($sql);
     $rs->bindValue(':limit',$limit,PDO::PARAM_INT) ;
     $rs->execute();               
-    return $rs->fetchall(PDO::FETCH_ASSOC);
+    return $rs->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function findOneById(PDO $connexion, int $id){
@@ -57,8 +57,13 @@ function update(PDO $connexion, int $id, $data){
     $rs->bindValue(':quote', $data['quote'], PDO::PARAM_STR);
     $rs->bindValue(':category_id', $data['category_id'], PDO::PARAM_INT);
     $rs->bindValue(':id', $id, PDO::PARAM_INT);
-
     return $rs->execute();
+}
 
-
+function delete (PDO $connexion, int $id){
+    $sql="  DELETE FROM posts
+            WHERE id=:id;";
+    $rs=$connexion->prepare($sql);
+    $rs->bindValue(':id', $id, PDO::PARAM_INT);
+    return $rs->execute();
 }
